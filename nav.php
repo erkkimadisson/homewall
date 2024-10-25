@@ -16,7 +16,7 @@ $navList = [
 
 
 ?>
-<div class="h-screen bg-gray-800">
+<div class="h-screen bg-gray-800 sm:col-span-2 md:col-span-1 lg:col-span-2">
     <div class="flex flex-col gap-10">
         <div id="nav-head" class="flex text-4xl font-bold flex-col">
             <div class="m-5 text-gray-100 flex flex-row items-center gap-5">
