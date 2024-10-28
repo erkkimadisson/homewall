@@ -1,7 +1,7 @@
 <?php
     require_once(__DIR__ . "/database/database.php");
     session_start();
-$version = "0.2.3";
+$version = "0.2.5";
 if (!isset($title)) {
     $title = 'HomeWall - ' . $version;
 }

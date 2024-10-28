@@ -3,10 +3,14 @@ include_once "./essentials.php";
 
 if (!isset($_GET["action"]) || $_GET["action"] == "login") {
     $action = "Login";
-    $actionPath = "./api/Login.php";
+    $actionPath = "./api/Login";
 } elseif ($_GET["action"] == "register") {
-    $action = "Register";
-    $actionPath = "./api/Register.php";
+    if ($_ENV["ALLOW_REGISTER"] == "true") {
+        $action = "Register";
+        $actionPath = "./api/Register";
+    } else {
+        header("Location: login?action=login");
+    }
 }
 
 ?>
@@ -101,7 +105,7 @@ document.getElementById('Form').addEventListener('submit', async function(event)
                 errorContainer.textContent = 'Login successful!';
                 // Optionally redirect after a delay
                 setTimeout(() => {
-                    window.location.href = 'index.php';
+                    window.location.href = 'index';
                 }, 1000); // Redirect after 1 second
             }
         })
