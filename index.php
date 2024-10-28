@@ -3,7 +3,7 @@
     $database = new Database();
     $conn = $database->getConnection();
 
-    if(!isset($_SESSION["id"]) || !isset($_SESSION["username"])) {
+    if(!isset($_SESSION["id"])) {
         header("Location: ./login.php");
     }
 
