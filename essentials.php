@@ -1,3 +1,13 @@
+<?php
+    require_once(__DIR__ . "/database/database.php");
+    session_start();
+$version = "0.2.3";
+if (!isset($title)) {
+    $title = 'HomeWall - ' . $version;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
