@@ -48,6 +48,10 @@ class Database
             $this->conn->exec($sql);
         }
     }
+    public function closeConnection()
+    {
+        $this->conn = null;
+    }
 }
 
 ?>
