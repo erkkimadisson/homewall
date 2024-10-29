@@ -1,5 +1,5 @@
 <?php
-include_once "./essentials.php";
+include_once __DIR__ ."/essentials.php";
 
 if (!isset($_GET["action"]) || $_GET["action"] == "login") {
     $action = "Login";
